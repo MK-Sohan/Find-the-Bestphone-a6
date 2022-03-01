@@ -112,3 +112,9 @@ body {
 h3 {
   margin-left: 20px;
 }
+
+#error-message {
+  text-align: center;
+  color: red;
+  font-size: 30px;
+}

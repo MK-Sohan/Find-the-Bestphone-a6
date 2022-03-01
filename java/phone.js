@@ -1,7 +1,15 @@
+const errormessage=document.getElementById('error-message');
+
+
+
+
+
 const searchphone=()=>{
+  errormessage.innerText='';
     const inputbox = document.getElementById('input-box').value;
+    document.getElementById('input-box').value='';
     if(inputbox==''){
-      alert(' Please give a phone name' )
+      errormessage.innerText='Enter a phone name'
     }
     else{
       const url = `
@@ -13,39 +21,50 @@ const searchphone=()=>{
       .then(res=>res.json())
       .then(data=>searchresult(data.data))
     }
-    document.getElementById('input-box').value='';
+    
    
 }
 
  const searchresult=phons=>{
     //  console.log(phons);
-const parantcontainer =document.getElementById('cards-container');
-document.getElementById('cards-container').textContent='';
-if (parantcontainer)
-for(const phone of phons){
-    //  console.log(phone);
-    const div = document.createElement('div');
-    div.classList.add('allcards-container');
-    div.innerHTML=`
     
-    <div class="card">
-    <div class="banner">
-      <img src="${phone.image}" alt="" />
-    </div>
-    
-    <div class="phone-details">
-      <h4>Name:${phone.phone_name}</h4>
-      <h4>Brand Name:${phone.brand}</h4>
-      
-      <button onclick="phonedetails('${phone.slug}')" class="btn2">Details</button>
-    </div>
-    </div>
-    
-    `
-    parantcontainer.appendChild(div);
-}
+    const phonsslice = phons.slice(0,20);
+    if(phonsslice.length==0){
+errormessage.innerText='No phone found'
+    }
+    else{
+      const parantcontainer =document.getElementById('cards-container');
+      document.getElementById('cards-container').textContent='';
 
-}
+
+      for(const phone of phonsslice){
+        //  console.log(phone);
+        const div = document.createElement('div');
+        div.classList.add('allcards-container');
+        div.innerHTML=`
+        
+        <div class="card">
+        <div class="banner">
+          <img src="${phone.image}" alt="" />
+        </div>
+        
+        <div class="phone-details">
+          <h4>Name:${phone.phone_name}</h4>
+          <h4>Brand Name:${phone.brand}</h4>
+          
+          <button onclick="phonedetails('${phone.slug}')" class="btn2">Details</button>
+        </div>
+        </div>
+        
+        `
+        parantcontainer.appendChild(div);
+    }
+    }
+
+
+
+
+ }
 
 const phonedetails=phoneid=>{
 // console.log(phoneid)
