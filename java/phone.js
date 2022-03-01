@@ -15,6 +15,7 @@ const searchphone=()=>{
       document.getElementById('detail-container').textContent='';
     }
     else{
+      errormessage2.innerText='';
       const url = `
       https://openapi.programming-hero.com/api/phones?search=${inputbox}
   
