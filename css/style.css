@@ -143,11 +143,11 @@ h3 {
     grid-template-columns: repeat(1, 1fr);
 
     grid-row-gap: 10px;
-    margin-left: 16px;
+    margin-left: 4px;
     margin-top: 50px;
   }
   #detail-container {
-    margin-left: 20px;
+    margin-left: 5px;
     margin-top: 40px;
   }
 
