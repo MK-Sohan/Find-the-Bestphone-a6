@@ -155,11 +155,12 @@ h3 {
   }
 
   #card2 {
-    width: 320px;
+    width: 330px;
     background-color: whitesmoke;
     box-shadow: 2px 2px 15px gray;
     border-radius: 10px;
     height: 1050px;
+    margin-left: 15px;
   }
 
   #card2 img {
@@ -173,11 +174,12 @@ h3 {
     margin-left: 1px;
   }
   .card {
-    width: 320px;
+    width: 330px;
     background-color: whitesmoke;
     box-shadow: 2px 2px 15px gray;
     border-radius: 10px;
-    height: 560px;
+    height: 470px;
+    margin-left: 15px;
   }
   .btn2 {
     color: rgb(27, 30, 32);
