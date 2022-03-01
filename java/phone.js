@@ -90,7 +90,7 @@ const showdetails=(details)=>{
         const div=document.createElement('div');
         div.innerHTML=`
         
-        <div id="card2" class="card">
+        <div id="card2" class="cardd">
         <div class="banner">
           <img src="${details.image}" alt="" />
         </div>
@@ -98,7 +98,12 @@ const showdetails=(details)=>{
         <div class="phone-details">
           <h4>Name:</h4><h3>${details.name}</h3>
           <h4>Release Date:</h4><h3>${details.releaseDate}</h3>
-          <h4>Sensors:</h4><h3>${'Fingerprint'},${'optical'},${'accelerometer'},${'gyro'},${'proximity'},${'compass '},${'color spectrum'}</h3>
+          <h4>Sensors:</h4><h3>${'Fingerprint'},
+          ${'optical'},
+          ${'accelerometer'},
+          ${'gyro'},${'proximity'},
+          ${'compass '},
+          ${'color spectrum'}</h3>
           <h4>MainFeatures-</h4>
           <h4>Storage:</h4>
           <h3>${details.mainFeatures.storage}</h3>

@@ -118,3 +118,55 @@ h3 {
   color: red;
   font-size: 30px;
 }
+
+/* Media quaries for mobile-----------------
+-------------------------- */
+
+@media only screen and (max-width: 644px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 100%;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .container h1 {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .allcards-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    grid-row-gap: 10px;
+    margin-left: 16px;
+    margin-top: 50px;
+  }
+  #detail-container {
+    margin-left: 20px;
+    margin-top: 40px;
+  }
+
+  #card2 {
+    width: 350px;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 15px gray;
+    border-radius: 10px;
+    height: 1000px;
+  }
+
+  #card2 img {
+    width: 190px;
+    height: 220px;
+    margin-left: 70px;
+    margin-top: 20px;
+  }
+  #card2 h4,
+  h3 {
+    margin-left: 1px;
+  }
+}
