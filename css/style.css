@@ -48,7 +48,7 @@ body {
   border-radius: 5px;
   font-weight: 800;
   margin-left: 15px;
-  margin-top: 80px;
+  margin-top: 50px;
   padding: 10px 120px;
 }
 .btn2:hover {
@@ -66,7 +66,7 @@ body {
 
 .phone-details {
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 .phone-details h4 {
   padding: 5px 0px;
@@ -75,7 +75,7 @@ body {
 .allcards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 1px;
+
   grid-row-gap: 10px;
   margin-left: 60px;
   margin-top: 50px;
@@ -86,7 +86,7 @@ body {
   background-color: whitesmoke;
   box-shadow: 2px 2px 15px gray;
   border-radius: 10px;
-  height: 530px;
+  height: 460px;
 }
 .card:hover {
   transform: scale(1.02);
@@ -94,4 +94,11 @@ body {
 #detail-container {
   margin-left: 690px;
   margin-top: 40px;
+}
+#card2 {
+  width: 750px;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 15px gray;
+  border-radius: 10px;
+  height: 760px;
 }

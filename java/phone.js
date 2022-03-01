@@ -16,7 +16,7 @@ const searchphone=()=>{
 const parantcontainer =document.getElementById('cards-container');
 document.getElementById('cards-container').textContent='';
 for(const phone of phons){
-    // console.log(phone);
+    //  console.log(phone);
     const div = document.createElement('div');
     div.classList.add('allcards-container');
     div.innerHTML=`
@@ -28,9 +28,8 @@ for(const phone of phons){
     
     <div class="phone-details">
       <h4>Name:${phone.phone_name}</h4>
-      <h4>Release Date:</h4>
-      <h4>Sensore:</h4>
-      <h4>Others:</h4>
+      <h4>Brand Name:${phone.brand}</h4>
+      
       <button onclick="phonedetails('${phone.slug}')" class="btn2">Details</button>
     </div>
     </div>
@@ -58,17 +57,23 @@ const showdetails=(details)=>{
         const div=document.createElement('div');
         div.innerHTML=`
         
-        <div class="card">
+        <div id="card2" class="card">
         <div class="banner">
           <img src="${details.image}" alt="" />
         </div>
         
         <div class="phone-details">
-          <h4>Name:${details.name}</h4>
-          <h4>Release Date:</h4>
-          <h4>Sensore:</h4>
-          <h4>Others:</h4>
-         
+          <h4>Name:</h4><h3>${details.name}</h3>
+          <h4>Release Date:</h4><h3>${details.releaseDate}</h3>
+          
+          <h4>MainFeatures-</h4>
+          <h4>Storage:</h4>
+          <h3>${details.mainFeatures.storage}</h3>
+          <h4>DisplaySize:</h4><h3>${details.mainFeatures.displaySize}</h3>
+          <h4>chipSet: </h4><h3>${details.mainFeatures.chipSet}</h3>
+          
+          <h4>Memory:</h4> <h3>${details.mainFeatures.memory}</h3>
+          
         </div>
         </div>
         `
