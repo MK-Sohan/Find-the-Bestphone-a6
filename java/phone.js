@@ -1,20 +1,27 @@
 const searchphone=()=>{
     const inputbox = document.getElementById('input-box').value;
+    if(inputbox==''){
+      alert(' Please give a phone name' )
+    }
+    else{
+      const url = `
+      https://openapi.programming-hero.com/api/phones?search=${inputbox}
+  
+      `
+     
+      fetch(url)
+      .then(res=>res.json())
+      .then(data=>searchresult(data.data))
+    }
     document.getElementById('input-box').value='';
-    const url = `
-    https://openapi.programming-hero.com/api/phones?search=${inputbox}
-
-    `
    
-    fetch(url)
-    .then(res=>res.json())
-    .then(data=>searchresult(data.data))
 }
 
  const searchresult=phons=>{
     //  console.log(phons);
 const parantcontainer =document.getElementById('cards-container');
 document.getElementById('cards-container').textContent='';
+if (parantcontainer)
 for(const phone of phons){
     //  console.log(phone);
     const div = document.createElement('div');

@@ -102,3 +102,13 @@ body {
   border-radius: 10px;
   height: 760px;
 }
+#card2 img {
+  width: 230px;
+  height: 270px;
+  margin-left: 250px;
+  margin-top: 20px;
+}
+#card2 h4,
+h3 {
+  margin-left: 20px;
+}
