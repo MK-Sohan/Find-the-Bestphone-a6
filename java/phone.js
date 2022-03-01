@@ -12,6 +12,7 @@ const searchphone=()=>{
     if(inputbox==''){
       errormessage2.innerText='Enter a phone name'
       errormessage.innerText='';
+      document.getElementById('detail-container').textContent='';
     }
     else{
       const url = `
