@@ -5,6 +5,7 @@ const errormessage=document.getElementById('error-message');
 
 
 const searchphone=()=>{
+  document.getElementById('cards-container').textContent='';
   errormessage.innerText='';
     const inputbox = document.getElementById('input-box').value;
     document.getElementById('input-box').value='';
@@ -38,7 +39,8 @@ errormessage.innerText='No phone found'
 
 
       for(const phone of phonsslice){
-        //  console.log(phone);
+        //  console.log(phonsslice);
+        
         const div = document.createElement('div');
         div.classList.add('allcards-container');
         div.innerHTML=`
@@ -76,7 +78,12 @@ fetch(url)
 }
 
 const showdetails=(details)=>{
-  console.log(details);
+   console.log(details);
+   const [FaceID,accelerometer,gyro,proximity,compass,barometer]=details.mainFeatures.sensors
+         
+   console.log(FaceID,accelerometer,gyro,proximity,compass,barometer);
+
+
      const parantcontainer=document.getElementById('detail-container');
      document.getElementById('detail-container').textContent='';
     
@@ -91,7 +98,7 @@ const showdetails=(details)=>{
         <div class="phone-details">
           <h4>Name:</h4><h3>${details.name}</h3>
           <h4>Release Date:</h4><h3>${details.releaseDate}</h3>
-          
+          <h4>Sensors:</h4><h3>${'Fingerprint'},${'optical'},${'accelerometer'},${'gyro'},${'proximity'},${'compass '},${'color spectrum'}</h3>
           <h4>MainFeatures-</h4>
           <h4>Storage:</h4>
           <h3>${details.mainFeatures.storage}</h3>
@@ -99,7 +106,10 @@ const showdetails=(details)=>{
           <h4>chipSet: </h4><h3>${details.mainFeatures.chipSet}</h3>
           
           <h4>Memory:</h4> <h3>${details.mainFeatures.memory}</h3>
-          
+          <h4>Others:-</h4>
+          <h3>WLAN:${details.others.WLAN}</h3>
+          <h3>Bluetooth:${details.others.Bluetooth}</h3>
+          <h3>GPS:${details.others.GPS}</h3>
         </div>
         </div>
         `
