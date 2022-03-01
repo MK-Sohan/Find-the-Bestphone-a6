@@ -1,5 +1,5 @@
 const errormessage=document.getElementById('error-message');
-
+const errormessage2=document.getElementById('error-message2');
 
 
 
@@ -10,7 +10,8 @@ const searchphone=()=>{
     const inputbox = document.getElementById('input-box').value;
     document.getElementById('input-box').value='';
     if(inputbox==''){
-      errormessage.innerText='Enter a phone name'
+      errormessage2.innerText='Enter a phone name'
+      errormessage.innerText='';
     }
     else{
       const url = `
@@ -31,11 +32,16 @@ const searchphone=()=>{
     
     const phonsslice = phons.slice(0,20);
     if(phonsslice.length==0){
-errormessage.innerText='No phone found'
+errormessage.innerText='No phone found!!'
+errormessage2.innerText='';
+document.getElementById('detail-container').textContent='';
+
+
+
     }
     else{
       const parantcontainer =document.getElementById('cards-container');
-      document.getElementById('cards-container').textContent='';
+      document.getElementById('cards-container').innerHTML='';
 
 
       for(const phone of phonsslice){
@@ -85,8 +91,8 @@ const showdetails=(details)=>{
 
 
      const parantcontainer=document.getElementById('detail-container');
+     
      document.getElementById('detail-container').textContent='';
-    
         const div=document.createElement('div');
         div.innerHTML=`
         

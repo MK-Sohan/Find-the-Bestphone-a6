@@ -117,6 +117,17 @@ h3 {
   text-align: center;
   color: red;
   font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  margin-top: 30px;
+}
+#error-message2 {
+  text-align: center;
+  color: red;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  margin-top: 30px;
 }
 
 /* Media quaries for mobile-----------------
@@ -155,12 +166,12 @@ h3 {
   }
 
   #card2 {
-    width: 330px;
+    width: 324px;
     background-color: whitesmoke;
     box-shadow: 2px 2px 15px gray;
     border-radius: 10px;
     height: 1050px;
-    margin-left: 15px;
+    margin-left: 20px;
   }
 
   #card2 img {
@@ -174,12 +185,12 @@ h3 {
     margin-left: 1px;
   }
   .card {
-    width: 330px;
+    width: 324px;
     background-color: whitesmoke;
     box-shadow: 2px 2px 15px gray;
     border-radius: 10px;
     height: 470px;
-    margin-left: 15px;
+    margin-left: 20px;
   }
   .btn2 {
     color: rgb(27, 30, 32);
