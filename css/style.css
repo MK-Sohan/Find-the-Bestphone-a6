@@ -130,6 +130,9 @@ h3 {
   .container {
     width: 100%;
   }
+  .container h1 {
+    font-size: 20px;
+  }
   body {
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -143,7 +146,7 @@ h3 {
     grid-template-columns: repeat(1, 1fr);
 
     grid-row-gap: 10px;
-    margin-left: 4px;
+    margin-left: 6px;
     margin-top: 50px;
   }
   #detail-container {
@@ -152,11 +155,11 @@ h3 {
   }
 
   #card2 {
-    width: 350px;
+    width: 320px;
     background-color: whitesmoke;
     box-shadow: 2px 2px 15px gray;
     border-radius: 10px;
-    height: 1000px;
+    height: 1050px;
   }
 
   #card2 img {
@@ -168,5 +171,36 @@ h3 {
   #card2 h4,
   h3 {
     margin-left: 1px;
+  }
+  .card {
+    width: 320px;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 15px gray;
+    border-radius: 10px;
+    height: 560px;
+  }
+  .btn2 {
+    color: rgb(27, 30, 32);
+    background-color: orange;
+    padding: 10px;
+    border: 2px solid orange;
+    border-radius: 5px;
+    font-weight: 800;
+    margin-left: 5px;
+    margin-top: 50px;
+    padding: 10px 120px;
+  }
+  .input-div input {
+    padding: 4px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .input-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-right: 20px;
   }
 }
